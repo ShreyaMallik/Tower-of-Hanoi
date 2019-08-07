@@ -13,10 +13,10 @@ void tower(int a,char from,char aux,char to){
 void main(){
      clrscr();
      int n;
-     cout<<"\n\t\t*****Tower of Hanoi*****\n";
-     cout<<"\t\tEnter number of discs : ";
+     cout<<"\n\Tower of Hanoi\n";
+     cout<<"Enter number of discs : ";
      cin>>n;
-     cout<<"\n\n";
+     
      tower(n,'A','B','C');
      getch();
 }
