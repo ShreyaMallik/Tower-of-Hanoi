@@ -1,20 +1,21 @@
 #include<iostream.h>
-void tower(int a,char from,char aux,char to){
-    if(a==1){
-       cout<<"\t\tMove disc 1 from "<<from<<" to "<<to<<"\n";
+void tower(int a,char init,char sec,char dest){
+    if(a==1)
+    {
+       cout<<"Move disc 1 from "<<init<<" to "<<dest<<"\n";
        return;
     }
     else{
-       tower(a-1,from,to,aux);
-       cout<<"\t\tMove disc "<<a<<" from "<<from<<" to "<<to<<"\n";
-       tower(a-1,aux,from,to);
+       tower(a-1,init,dest,sec);
+       cout<<"Move disc "<<a<<" from "<<init<<" to "<<dest<<"\n";
+       tower(a-1,sec,init,dest);
     }
 }
 void main(){
      clrscr();
      int n;
-     cout<<"\n\Tower of Hanoi\n";
-     cout<<"Enter number of discs : ";
+     cout<<"\nTower of Hanoi\n";
+     cout<<"Enter number of discs:";
      cin>>n;
      
      tower(n,'A','B','C');
